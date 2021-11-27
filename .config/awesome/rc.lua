@@ -139,7 +139,7 @@ batbox = wibox.layout.margin(
                     color = { type = "linear",
                               from = { 0, 0 },
                               to = { 0, 30 },
-                              stops = { { 0, "#689d6a" },
+                              stops = { { 0, "#8EC07C" },
                                         { 1, "#FF5656" } } } },
                   forced_height = 10, forced_width = 8,
                   direction = 'east', color = beautiful.fg_widget,
@@ -392,7 +392,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Dmenu (command customised for gruvbox color scheme)
-    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run -nb '#1d2021' -sb '#98971a' -nf '#a89984'") end,
+    awful.key({ modkey },            "b",     function () awful.util.spawn("dmenu_run -nb '#1d2021' -sb '#98971a' -nf '#a89984'") end,
             {description = "run dmenu", group = "launcher"}),
 
     -- Browser
@@ -402,6 +402,14 @@ globalkeys = gears.table.join(
     -- Emacs
     awful.key({ modkey },            "e",     function () awful.util.spawn("emacs") end,
             {description = "Emacs", group = "applications"}),
+
+    -- rofi
+    awful.key({ modkey },            "r",     function () awful.util.spawn("/home/ishaan/.config/rofi/bin/launcher_colorful") end,
+            {description = "rofi", group = "launcher"}),
+
+    -- rofi
+    awful.key({ modkey, "Shift"   },            "p",     function () awful.util.spawn("/home/ishaan/.config/rofi/bin/menu_powermenu") end,
+            {description = "powermenu", group = "launcher"}),
 
     -- Volume Keys
     awful.key({}, "XF86AudioRaiseVolume", function() os.execute("amixer set Master 5%+") end,
@@ -666,7 +674,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 6.5
 
 -- Autostart Applications
-awful.spawn.with_shell("compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible")
+awful.spawn.with_shell("compton -b --backend glx --paint-on-overlay --glx-no-stencil --unredir-if-possible")
 awful.spawn.with_shell("feh --bg-fill --no-fehbg --randomize ~/Pictures/wallpapers/")
 awful.spawn.with_shell("xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Tapping Enabled' 1")
 awful.spawn.with_shell('xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1')

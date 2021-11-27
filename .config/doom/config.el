@@ -8,7 +8,7 @@
       doom-big-font (font-spec :family "Cascadia Code" :size 24))
 
 ;; Theme
-(setq doom-theme 'doom-dark+)
+(setq doom-theme 'doom-gruvbox)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.

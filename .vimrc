@@ -45,6 +45,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tbastos/vim-lua'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'vim-python/python-syntax'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
