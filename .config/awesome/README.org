@@ -2,7 +2,7 @@
 #+PROPERTY: header-args :tangle rc.lua
 
 
-[[https://user-images.githubusercontent.com/84115956/142823476-4310f633-b52a-4fe0-8dbb-36c72e498be1.png]]
+[[https://user-images.githubusercontent.com/84115956/143768167-23d23e73-a0d0-45e9-926d-c6f67afe87ca.png]]
 
 
 * Table Of Contents :toc:
@@ -366,11 +366,12 @@ end)
 | Terminal     | MOD + RET       |
 | Restart      | MOD + Ctrl + r  |
 | Quit         | MOD + Shift + q |
-| Dmenu        | MOD + r         |
+| Rofi         | MOD + r         |
 | Browser      | MOD + a         |
 | File Manager | MOD + f         |
 | Emacs        | MOD + e         |
 | Close Window | MOD + Shift + c |
+| Powermenu    | MOD + Shift + p |
 
 #+begin_src lua
 -- {{{ Mouse bindings
